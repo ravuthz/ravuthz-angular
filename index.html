@@ -8,19 +8,20 @@
 <body>
     
     <script>
-         var appId = '190876102204574';
-        var apiVersion = 'v7.0';
-
         window.fbAsyncInit = function() {
-        FB.init({
-            appId      : appId,
-            cookie     : true,
-            xfbml      : true,
-            version    : apiVersion
-        });
             
-        FB.AppEvents.logPageView();   
+            FB.init({
+                appId      : '190876102204574',
+                cookie     : true,
+                xfbml      : true,
+                version    : 'v7.0'
+            });
             
+            FB.AppEvents.logPageView();   
+            
+            <button onclick='FB.AppEvents.logEvent("buttonClicked")'>
+              Click me
+            </button>
         };
     
         (function(d, s, id){
